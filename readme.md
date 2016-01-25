@@ -28,10 +28,10 @@ Let’s say you made a To Do list app, where you can add things to a list and cr
 When you rotate the device, the things you marked as complete are no longer crossed off.
 
 **Question**: Why did this happen?
-<br />Answer:
+<br />Answer: When you change orientation it restarts the activity
 
 **Question**: How do you fix this issue?
-<br />Answer:
+<br />Answer: save info in a bundle and set it to an onCreate, so everytime it opens it will access that bundle
 
 
 ####Scenario 2:
@@ -41,7 +41,7 @@ The Amazon Kindle Android app allows you to open and read eBooks. You discovered
 When you opened the app again, and opened the book, it started from page 1 (and not page 68 where you left off)!
 
 **Question**: How would you fix this issue?
-<br />**Answer**:
+<br />**Answer**: using Shared Preferences: set the onPause method to reference the Shared Preference to save the page number the reader is at. Create a method in onResume that references that saved page number and display the page that the reader left off on.
 
 
 ####Scenario 3:
@@ -51,7 +51,7 @@ Facebook for Android added a feature last year where, if you started writing a c
 Take this scenario. On a post on Facebook, you click the “comment” button (which opens a new CommentActivity). You start writing a comment, and then change your mind by pressing the back key (which closes the CommentActivity). You click on the “comment” button again, and in the newly-opened CommentActivity, the comment you were writing is still there.
 
 **Question**: How would you implement this feature? Be specific; what lifecycle methods would you use in CommentActivity, and what techniques would you use?
-<br />**Answer**:
+<br />**Answer**: onPause with Shared Preferences, save the data, onResume use Shared Preferences to repopulate the string that the user previously commented
 
 
 
@@ -59,13 +59,13 @@ In your own words…
 ==================
 
 **Question**: What are the methods of the Activity Lifecycle?
-<br />**Answer**: 
+<br />**Answer**: onCreate --> onStart --> onResume,  onPause --> onStop --> onDestroy
 
 **Question**: What order are the methods called?
-<br />**Answer**: 
+<br />**Answer**: ^^^^^^^
 
 **Question**: What is a bundle?
-<br />**Answer**: 
+<br />**Answer**: an object that saves and can transfer your data in a SavedInstanceState
 
 **Question**: How do you get the Shared Preferences of an app?
-<br />**Answer**:
+<br />**Answer**: declare new Shared Oreference object, then initialize it with getSharedPreferences() 
