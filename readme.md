@@ -1,9 +1,7 @@
 ---
-
 | Title | Type | Duration | Name | City |
 | --- | --- | --- | --- | --- |
 | Activity Lifecycle | Lab | "1:00" | James Davis | NYC |
-
 ---  
 # Activity Lifecycle Lab
 
